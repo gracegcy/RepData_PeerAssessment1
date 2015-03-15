@@ -7,7 +7,7 @@ output:
 
 
 ## Loading and preprocessing the data
-```{r load data}
+```{r loaddata}
 activity <- read.csv("C:/Users/cgu018/Desktop/Analytics/Open Course/DS JHU/Reproducible Research/project 1/activity.csv", sep = ",", header = TRUE)
 ```
 
