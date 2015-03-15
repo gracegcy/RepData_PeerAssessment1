@@ -19,8 +19,22 @@ a. Calculate the total number of steps taken per day, and the mean and median
 ```r
 step.daily <- aggregate(. ~ date, data=activity, FUN=sum)
 mean.steps = mean(step.daily$steps)
-median.steps = median(step.daily$steps)
+mean.steps
 ```
+
+```
+## [1] 10766.19
+```
+
+```r
+median.steps = median(step.daily$steps)
+median.steps
+```
+
+```
+## [1] 10765
+```
+
 
 b.histogram of the total number of steps taken each day
 
@@ -42,6 +56,11 @@ step.interval <- aggregate(. ~ interval, data=activity, FUN=mean)
 #the interval with max steps across day
 max.steps = max(step.interval$steps)
 max.interval = step.interval[which(step.interval$steps == max.steps),1] 
+max.interval
+```
+
+```
+## [1] 835
 ```
 
 b. time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
